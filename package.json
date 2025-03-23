@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "cssnano": "^7.0.6",
+    "uglify-js": "^3.19.3"
+  }
+}
