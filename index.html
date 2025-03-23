@@ -775,29 +775,5 @@
             });
         });
     </script>
-
-    <!-- Cache Control -->
-    <IfModule mod_expires.c>
-        ExpiresActive On
-        ExpiresByType text/css "access plus 1 month"
-        ExpiresByType application/javascript "access plus 1 month"
-        ExpiresByType image/jpeg "access plus 1 year"
-        ExpiresByType image/png "access plus 1 year"
-        ExpiresByType image/gif "access plus 1 year"
-        ExpiresByType video/mp4 "access plus 1 year"
-    </IfModule>
-
-    <IfModule mod_headers.c>
-        <FilesMatch "\.(css|js|jpg|jpeg|png|gif|mp4)$">
-            Header set Cache-Control "max-age=2592000, public"
-        </FilesMatch>
-    </IfModule>
-
-    <IfModule mod_headers.c>
-        location ~* \.(css|js|jpg|jpeg|png|gif|mp4)$ {
-            expires 1y;
-            add_header Cache-Control "public, max-age=31536000";
-        }
-    </IfModule>
 </body>
 </html>
