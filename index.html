@@ -457,11 +457,25 @@
             border: 2px solid transparent;
             border-image: linear-gradient(
                 45deg,
-                var(--cyber-cyan),
+                var (--cyber-cyan),
                 var(--nebula-purple)
             ) 1;
             animation: border-pulse 1.5s infinite;
             opacity: 0.7;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--nebula-purple);
+            color: var(--star-color);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s;
+            font-family: 'Orbitron', sans-serif;
+            border: 2px solid transparent;
+            margin-top: 1rem; /* Add spacing between rows of buttons */
+            margin-right: 1rem; /* Add spacing between buttons in the same row */
         }
 
         /* Contact Section */
