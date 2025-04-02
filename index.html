@@ -33,7 +33,7 @@
             overflow: hidden;
         }
 
-      /*  .star {
+        .star {
             position: absolute;
             background: white;
             border-radius: 50%;
@@ -558,6 +558,7 @@
 </head>
 <body>
     <!-- Background Effects -->
+    <div class="starfield" id="starfield"></div>
     <div class="nebula"></div>
     <div class="pulsing-stars"></div>
     <div class="cursor-effect"></div>
@@ -720,55 +721,55 @@
         createParticles();
 
         // Remove the createStars function or comment out the drifting stars logic
-        // function createStars() {
-        //     const starfield = document.getElementById('starfield');
-        //     const shootingStarCount = 5; // Number of shooting stars
+        function createStars() {
+            const starfield = document.getElementById('starfield');
+            const shootingStarCount = 5; // Number of shooting stars
 
-        //     // Remove drifting stars logic
-        //     // for (let i = 0; i < starCount; i++) {
-        //     //     const star = document.createElement('div');
-        //     //     star.className = 'star';
+            // Remove drifting stars logic
+            // for (let i = 0; i < starCount; i++) {
+            //     const star = document.createElement('div');
+            //     star.className = 'star';
 
-        //     //     // Randomize star size and position
-        //     //     const size = Math.random() * 3 + 1; // Size between 1px and 4px
-        //     //     const x = Math.random() * 100; // Random horizontal position
-        //     //     const y = Math.random() * 100; // Random vertical position
-        //     //     const duration = Math.random() * 10 + 5; // Animation duration between 5s and 15s
+            //     // Randomize star size and position
+            //     const size = Math.random() * 3 + 1; // Size between 1px and 4px
+            //     const x = Math.random() * 100; // Random horizontal position
+            //     const y = Math.random() * 100; // Random vertical position
+            //     const duration = Math.random() * 10 + 5; // Animation duration between 5s and 15s
 
-        //     //     star.style.width = `${size}px`;
-        //     //     star.style.height = `${size}px`;
-        //     //     star.style.left = `${x}%`;
-        //     //     star.style.top = `${y}%`;
-        //     //     star.style.animationDuration = `${duration}s`;
+            //     star.style.width = `${size}px`;
+            //     star.style.height = `${size}px`;
+            //     star.style.left = `${x}%`;
+            //     star.style.top = `${y}%`;
+            //     star.style.animationDuration = `${duration}s`;
 
-        //     //     starfield.appendChild(star);
-        //     // }
+            //     starfield.appendChild(star);
+            // }
 
-        //     // Keep shooting stars if needed
-        //     for (let i = 0; i < shootingStarCount; i++) {
-        //         const shootingStar = document.createElement('div');
-        //         shootingStar.className = 'shooting-star';
+            // Keep shooting stars if needed
+            for (let i = 0; i < shootingStarCount; i++) {
+                const shootingStar = document.createElement('div');
+                shootingStar.className = 'shooting-star';
 
-        //         // Randomize shooting star direction
-        //         const directions = [
-        //             'shooting-star-top-left',
-        //             'shooting-star-top-right',
-        //             'shooting-star-bottom-left',
-        //             'shooting-star-bottom-right'
-        //         ];
-        //         const direction = directions[Math.floor(Math.random() * directions.length)];
+                // Randomize shooting star direction
+                const directions = [
+                    'shooting-star-top-left',
+                    'shooting-star-top-right',
+                    'shooting-star-bottom-left',
+                    'shooting-star-bottom-right'
+                ];
+                const direction = directions[Math.floor(Math.random() * directions.length)];
 
-        //         // Randomize shooting star delay and duration
-        //         const delay = Math.random() * 10; // Random delay between 0s and 10s
-        //         const duration = Math.random() * 5 + 3; // Animation duration between 3s and 8s
+                // Randomize shooting star delay and duration
+                const delay = Math.random() * 10; // Random delay between 0s and 10s
+                const duration = Math.random() * 5 + 3; // Animation duration between 3s and 8s
 
-        //         shootingStar.style.animationName = direction;
-        //         shootingStar.style.animationDelay = `${delay}s`;
-        //         shootingStar.style.animationDuration = `${duration}s`;
+                shootingStar.style.animationName = direction;
+                shootingStar.style.animationDelay = `${delay}s`;
+                shootingStar.style.animationDuration = `${duration}s`;
 
-        //         starfield.appendChild(shootingStar);
-        //     }
-        // }
+                starfield.appendChild(shootingStar);
+            }
+        }
         //
         // Call the function if needed
         // createStars();
