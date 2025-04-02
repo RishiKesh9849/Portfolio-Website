@@ -314,18 +314,18 @@
             backdrop-filter: blur(12px) brightness(1.2);
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             position: relative;
-            overflow: visible; /* Change from hidden to visible */
+            overflow: visible; /* Ensure content is not clipped */
             box-shadow: 
                 0 0 30px rgba(124, 58, 237, 0.3),
                 inset 0 0 15px rgba(0, 243, 255, 0.1);
         }
 
         .project-card:hover {
+            transform: translateY(-10px) perspective(1000px) rotateX(3deg) rotateY(3deg);
             box-shadow: 
                 0 0 50px rgba(124, 58, 237, 0.5),
                 0 0 70px rgba(0, 243, 255, 0.3),
                 inset 0 0 25px rgba(0, 243, 255, 0.2);
-            transform: translateY(-10px) perspective(1000px) rotateX(3deg) rotateY(3deg);
         }
 
         .project-card::before {
@@ -337,7 +337,7 @@
             height: 200%;
             background: linear-gradient(
                 45deg, 
-                transparent 25%, 
+                transparent 25%,
                 rgba(124, 58, 237, 0.15) 50%,
                 transparent 75%
             );
@@ -388,22 +388,40 @@
         }
 
         .download-btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: var(--nebula-purple);
+            background: 
+                linear-gradient(
+                    135deg,
+                    rgba(124, 58, 237, 0.15) 0%,
+                    rgba(16, 14, 23, 0.9) 50%,
+                    rgba(0, 243, 255, 0.15) 100%
+                ),
+                repeating-linear-gradient(
+                    -45deg,
+                    transparent 0px,
+                    transparent 2px,
+                    rgba(124, 58, 237, 0.1) 2px,
+                    rgba(124, 58, 237, 0.1) 4px
+                );
+            border: 2px solid;
+            border-image: linear-gradient(
+                135deg,
+                var(--nebula-purple),
+                var(--cyber-cyan)
+            ) 1;
             color: var(--star-color);
-            text-decoration: none;
-            border-radius: 4px;
-            transition: all 0.3s;
+            padding: 1rem 3rem;
             font-family: 'Orbitron', sans-serif;
-            border: 2px solid transparent;
-            margin-top: 1rem; /* Add spacing between buttons */
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(6px);
+            text-shadow: 0 0 8px rgba(0, 243, 255, 0.5);
         }
 
         .download-btn:hover {
             background: linear-gradient(
                 135deg,
-                rgba(124, 58, 237, 0.3) 0%, 
+                rgba(124, 58, 237, 0.3) 0%,
                 rgba(16, 14, 23, 0.9) 50%,
                 rgba(0, 243, 255, 0.3) 100%
             );
@@ -422,7 +440,7 @@
             height: 200%;
             background: linear-gradient(
                 45deg, 
-                transparent 20%, 
+                transparent 20%,
                 rgba(255,255,255,0.15) 50%,
                 transparent 80%
             );
@@ -567,7 +585,6 @@
                     <h3>Chaos Reborn</h3>
                     <p>A fast paced movement shooter</p>
                     <a href=""><button class="download-btn">View Code</button></a>
-                    <a href="https://drive.google.com/drive/folders/12gYtjBAZYrJHDFGAyEdxKezNFIAHEHhz?usp=sharing" target="_blank"><button class="download-btn">View Design Docs</button></a>
                     <a href="https://rishikesh-1.itch.io/chaos-reborn" target="_blank"><button class="download-btn">Play Demo</button></a>
                     <a href="https://example.com" target="_blank"><button class="download-btn">New Button</button></a> <!-- New Button -->
                 </div>
@@ -741,6 +758,7 @@
                 starfield.appendChild(shootingStar);
             }
         }
+
         createStars();
 
         document.addEventListener('DOMContentLoaded', function() {
