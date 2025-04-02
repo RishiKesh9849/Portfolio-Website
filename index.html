@@ -586,7 +586,7 @@
                     <p>A fast paced movement shooter</p>
                     <a href=""><button class="download-btn">View Code</button></a>
                     <a href="https://rishikesh-1.itch.io/chaos-reborn" target="_blank"><button class="download-btn">Play Demo</button></a>
-                    <a href="https://example.com" target="_blank"><button class="download-btn">New Button</button></a> <!-- New Button -->
+                    <a href="https://example.com" target="_blank"><button class="download-btn">View Design Documents</button></a> <!-- New Button -->
                 </div>
                 <div class="project-card">
                     <div class="game-preview">
@@ -707,33 +707,32 @@
         }
         createParticles();
 
-        // Create Moving Stars
+        // Remove the createStars function or comment out the drifting stars logic
         function createStars() {
             const starfield = document.getElementById('starfield');
-            const starCount = 100; // Number of drifting stars
             const shootingStarCount = 5; // Number of shooting stars
 
-            // Create drifting stars
-            for (let i = 0; i < starCount; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
+            // Remove drifting stars logic
+            // for (let i = 0; i < starCount; i++) {
+            //     const star = document.createElement('div');
+            //     star.className = 'star';
 
-                // Randomize star size and position
-                const size = Math.random() * 3 + 1; // Size between 1px and 4px
-                const x = Math.random() * 100; // Random horizontal position
-                const y = Math.random() * 100; // Random vertical position
-                const duration = Math.random() * 10 + 5; // Animation duration between 5s and 15s
+            //     // Randomize star size and position
+            //     const size = Math.random() * 3 + 1; // Size between 1px and 4px
+            //     const x = Math.random() * 100; // Random horizontal position
+            //     const y = Math.random() * 100; // Random vertical position
+            //     const duration = Math.random() * 10 + 5; // Animation duration between 5s and 15s
 
-                star.style.width = `${size}px`;
-                star.style.height = `${size}px`;
-                star.style.left = `${x}%`;
-                star.style.top = `${y}%`;
-                star.style.animationDuration = `${duration}s`;
+            //     star.style.width = `${size}px`;
+            //     star.style.height = `${size}px`;
+            //     star.style.left = `${x}%`;
+            //     star.style.top = `${y}%`;
+            //     star.style.animationDuration = `${duration}s`;
 
-                starfield.appendChild(star);
-            }
+            //     starfield.appendChild(star);
+            // }
 
-            // Create shooting stars
+            // Keep shooting stars if needed
             for (let i = 0; i < shootingStarCount; i++) {
                 const shootingStar = document.createElement('div');
                 shootingStar.className = 'shooting-star';
@@ -759,7 +758,8 @@
             }
         }
 
-        createStars();
+        // Call the function if needed
+        // createStars();
 
         document.addEventListener('DOMContentLoaded', function() {
             const videos = document.querySelectorAll('.game-preview video');
