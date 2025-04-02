@@ -322,460 +322,442 @@
 
         .project-card:hover {
             box-shadow: 
-                0 0 50px rgba(124, 58, 237, 0.5),ranslateY(-10px) perspective(1000px) rotateX(3deg) rotateY(3deg);
+                0 0 50px rgba(124, 58, 237, 0.5),
                 0 0 70px rgba(0, 243, 255, 0.3),
-                inset 0 0 25px rgba(0, 243, 255, 0.2);,
+                inset 0 0 25px rgba(0, 243, 255, 0.2);
+            transform: translateY(-10px) perspective(1000px) rotateX(3deg) rotateY(3deg);
         }
-       inset 0 0 25px rgba(0, 243, 255, 0.2);
-        .project-card::before {        }
+
+        .project-card::before {
             content: '';
-            position: absolute;efore {
+            position: absolute;
             top: -150%;
-            left: -50%;bsolute;
+            left: -50%;
             width: 200%;
             height: 200%;
             background: linear-gradient(
                 45deg, 
-                transparent 25%, linear-gradient(
+                transparent 25%, 
                 rgba(124, 58, 237, 0.15) 50%,
                 transparent 75%
-            );37, 0.15) 50%,
-            animation: hologram-scan 6s linear infinite;  transparent 75%
+            );
+            animation: hologram-scan 6s linear infinite;
             opacity: 0.4;
-            pointer-events: none;logram-scan 6s linear infinite;
+            pointer-events: none;
         }
-   pointer-events: none;
-        .project-card::after {        }
+
+        .project-card::after {
             content: '';
-            position: absolute;fter {
+            position: absolute;
             top: 0;
-            left: 0;n: absolute;
+            left: 0;
             right: 0;
             bottom: 0;
             background: radial-gradient(
                 circle at var(--x) var(--y),
                 rgba(0, 243, 255, 0.15) 0%,
-                transparent 70%,
-            );5, 0.15) 0%,
-            pointer-events: none;  transparent 70%
+                transparent 70%
+            );
+            pointer-events: none;
             mix-blend-mode: screen;
         }
-   mix-blend-mode: screen;
-        .game-preview {        }
+
+        .game-preview {
             width: 100%;
             padding-bottom: 56.25%; /* 16:9 aspect ratio */
             position: relative;
-            overflow: hidden;25%; /* 16:9 aspect ratio */
-            border: 2px solid var(--nebula-purple);e;
+            overflow: hidden;
+            border: 2px solid var(--nebula-purple);
             margin-bottom: 1rem;
-        }r(--nebula-purple);
-   margin-bottom: 1rem;
-        .game-preview video {        }
+        }
+
+        .game-preview video {
             position: absolute;
             top: 0;
-            left: 0;n: absolute;
+            left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-   object-fit: cover;
-        /* Download Section */        }
+
+        /* Download Section */
         .download-section {
-            text-align: center; */
+            text-align: center;
             padding: 4rem 0;
-            border-top: 1px solid var(--nebula-purple);er;
+            border-top: 1px solid var(--nebula-purple);
         }
-   border-top: 1px solid var(--nebula-purple);
-        .download-btn {        }
-            background: 
-                linear-gradient(
-                    135deg,
-                    rgba(124, 58, 237, 0.15) 0%,ient(
-                    rgba(16, 14, 23, 0.9) 50%,
-                    rgba(0, 243, 255, 0.15) 100%%,
-                ),
-                repeating-linear-gradient(  rgba(0, 243, 255, 0.15) 100%
-                    -45deg,
-                    transparent 0px,inear-gradient(
-                    transparent 2px,
-                    rgba(124, 58, 237, 0.1) 2px,
-                    rgba(124, 58, 237, 0.1) 4px
-                );,
-            border: 2px solid;  rgba(124, 58, 237, 0.1) 4px
-            border-image: linear-gradient(
-                135deg,
-                var(--nebula-purple),e: linear-gradient(
-                var(--cyber-cyan)
-            ) 1;le),
-            color: var(--star-color);var(--cyber-cyan)
-            padding: 1rem 3rem;
-            font-family: 'Orbitron', sans-serif;olor);
+
+        .download-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--nebula-purple);
+            color: var(--star-color);
+            text-decoration: none;
+            border-radius: 4px;
             transition: all 0.3s;
-            position: relative;n', sans-serif;
-            overflow: hidden;s;
-            backdrop-filter: blur(6px);e;
-            text-shadow: 0 0 8px rgba(0, 243, 255, 0.5);
+            font-family: 'Orbitron', sans-serif;
+            border: 2px solid transparent;
+            margin-top: 1rem; /* Add spacing between buttons */
         }
-   text-shadow: 0 0 8px rgba(0, 243, 255, 0.5);
-        .download-btn:hover {        }
+
+        .download-btn:hover {
             background: linear-gradient(
                 135deg,
-                rgba(124, 58, 237, 0.3) 0%, linear-gradient(
+                rgba(124, 58, 237, 0.3) 0%, 
                 rgba(16, 14, 23, 0.9) 50%,
-                rgba(0, 243, 255, 0.3) 100%,
+                rgba(0, 243, 255, 0.3) 100%
             );
-            box-shadow:   rgba(0, 243, 255, 0.3) 100%
+            box-shadow: 
                 0 0 30px rgba(124, 58, 237, 0.5),
                 0 0 20px rgba(0, 243, 255, 0.4);
-            transform: scale(1.05);,
-        }3, 255, 0.4);
-   transform: scale(1.05);
-        .download-btn::before {        }
+            transform: scale(1.05);
+        }
+
+        .download-btn::before {
             content: '';
-            position: absolute;efore {
+            position: absolute;
             top: -50%;
-            left: -50%;absolute;
+            left: -50%;
             width: 200%;
             height: 200%;
             background: linear-gradient(
                 45deg, 
-                transparent 20%, linear-gradient(
+                transparent 20%, 
                 rgba(255,255,255,0.15) 50%,
                 transparent 80%
-            );5,0.15) 50%,
-            animation: energy-flow 2.5s linear infinite;  transparent 80%
+            );
+            animation: energy-flow 2.5s linear infinite;
             mix-blend-mode: overlay;
-        }.5s linear infinite;
-   mix-blend-mode: overlay;
-        .download-btn::after {        }
+        }
+
+        .download-btn::after {
             content: '';
-            position: absolute;fter {
+            position: absolute;
             top: 0;
-            left: 0;n: absolute;
+            left: 0;
             right: 0;
             bottom: 0;
             border: 2px solid transparent;
             border-image: linear-gradient(
                 45deg,
-                var(--cyber-cyan),ge: linear-gradient(
+                var(--cyber-cyan),
                 var(--nebula-purple)
             ) 1;
-            animation: border-pulse 1.5s infinite;var(--nebula-purple)
+            animation: border-pulse 1.5s infinite;
             opacity: 0.7;
-        }rder-pulse 1.5s infinite;
-   opacity: 0.7;
-        /* Contact Section */        }
+        }
+
+        /* Contact Section */
         .contact-section {
-            padding: 4rem 0; */
+            padding: 4rem 0;
             text-align: center;
         }
-   text-align: center;
-        .social-links {        }
+
+        .social-links {
             display: flex;
             justify-content: center;
             gap: 2rem;
-            flex-wrap: wrap;ntent: center;
+            flex-wrap: wrap;
         }
-   flex-wrap: wrap;
-        .social-links a {        }
+
+        .social-links a {
             color: var(--star-color);
             text-decoration: none;
-            padding: 1rem 2rem;r);
-            border: 1px solid var(--nebula-purple);ne;
+            padding: 1rem 2rem;
+            border: 1px solid var(--nebula-purple);
             border-radius: 4px;
-            transition: all 0.3s;ar(--nebula-purple);
+            transition: all 0.3s;
         }
-   transition: all 0.3s;
-        .social-links a:hover {        }
+
+        .social-links a:hover {
             background: var(--nebula-purple);
         }
-   background: var(--nebula-purple);
-        /* Animations */        }
+
+        /* Animations */
         @keyframes text-glow {
             from { text-shadow: 0 0 10px var(--nebula-purple); }
             to { text-shadow: 0 0 20px var(--nebula-purple), 0 0 30px var(--nebula-purple); }
         }
-   to { text-shadow: 0 0 20px var(--nebula-purple), 0 0 30px var(--nebula-purple); }
-        @keyframes typing {        }
+
+        @keyframes typing {
             from { width: 0 }
             to { width: 100% }
         }
-   to { width: 100% }
-        @keyframes blink-caret {        }
+
+        @keyframes blink-caret {
             from, to { border-color: transparent }
             50% { border-color: var(--nebula-purple) }
         }
-   50% { border-color: var(--nebula-purple) }
-        @keyframes fadeIn {        }
+
+        @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
-        }x); }
-   to { opacity: 1; transform: translateY(0); }
-        @keyframes hologram-scan {        }
+        }
+
+        @keyframes hologram-scan {
             0% { transform: translateY(-100%) rotate(45deg); }
             100% { transform: translateY(100%) rotate(45deg); }
         }
-   100% { transform: translateY(100%) rotate(45deg); }
-        @keyframes energy-flow {        }
+
+        @keyframes energy-flow {
             0% { transform: translateX(-100%) rotate(45deg); }
             100% { transform: translateX(100%) rotate(45deg); }
         }
-   100% { transform: translateX(100%) rotate(45deg); }
-        @keyframes border-pulse {        }
+
+        @keyframes border-pulse {
             0% { opacity: 0.3; }
-            50% { opacity: 0.7; }{
+            50% { opacity: 0.7; }
             100% { opacity: 0.3; }
         }
-   100% { opacity: 0.3; }
-        @media (max-width: 768px) {        }
+
+        @media (max-width: 768px) {
             nav a {
-                display: block;-width: 768px) {
+                display: block;
                 margin: 0.5rem 0;
             }
-            .hero h1 {   margin: 0.5rem 0;
+            .hero h1 {
                 font-size: 2.5rem;
             }
-            .intro-text {   font-size: 2.5rem;
+            .intro-text {
                 font-size: 1rem;
                 padding: 0 1rem;
             }
-        }   padding: 0 1rem;
-    </style>   }
+        }
+    </style>
 </head>
-<body>tyle>
-    <!-- Background Effects -->>
+<body>
+    <!-- Background Effects -->
     <div class="starfield" id="starfield"></div>
     <div class="nebula"></div>
-    <div class="pulsing-stars"></div>"starfield"></div>
+    <div class="pulsing-stars"></div>
     <div class="cursor-effect"></div>
 
-    <!-- Hero Section -->    <div class="cursor-effect"></div>
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-content">
             <h1 style="font-family: 'Poppins', sans-serif;">RISHIKESH</h1>
             <h2 class="typing-effect">GAME DEVELOPER & DESIGNER</h2>
-            <p class="intro-text">H</h1>
-                An aspiring Game Developer with a strong foundation in game design. Love crafting engaging gameplay mechanics and designing games that captivate players.ct">GAME DEVELOPER & DESIGNER</h2>
+            <p class="intro-text">
+                An aspiring Game Developer with a strong foundation in game design. Love crafting engaging gameplay mechanics and designing games that captivate players.
                 Currently honing my skills in Unity, Unreal Engine and exploring the technical side of game development. My experience as a Game Designer has taught me the importance of balancing creativity with player experience, and I’m excited to bring that perspective to my development journey.
             </p>
-            <a href="#projects" class="cta-button">Explore My Universe</a>Currently honing my skills in Unity, Unreal Engine and exploring the technical side of game development. My experience as a Game Designer has taught me the importance of balancing creativity with player experience, and I’m excited to bring that perspective to my development journey.
+            <a href="#projects" class="cta-button">Explore My Universe</a>
         </div>
-    </section> href="#projects" class="cta-button">Explore My Universe</a>
+    </section>
 
-    <!-- Navigation -->    </section>
+    <!-- Navigation -->
     <nav>
-        <div class="container">Navigation -->
+        <div class="container">
             <a href="#projects">PROJECTS</a>
             <a href="#resume">RESUME</a>
-            <a href="#contact">CONTACT</a></a>
+            <a href="#contact">CONTACT</a>
         </div>
-    </nav> href="#contact">CONTACT</a>
-div>
-    <!-- Main Content -->    </nav>
+    </nav>
+
+    <!-- Main Content -->
     <main class="container">
         <!-- Projects Section -->
         <section id="projects">
-            <h2>Projects</h2>->
-            <div class="projects-grid">">
+            <h2>Projects</h2>
+            <div class="projects-grid">
                 <div class="project-card">
                     <div class="game-preview">
                         <video src="ChaosReborn.mp4" loop autoplay muted></video>
                     </div>
-                    <h3>Chaos Reborn</h3>ideo src="ChaosReborn.mp4" loop autoplay muted></video>
+                    <h3>Chaos Reborn</h3>
                     <p>A fast paced movement shooter</p>
                     <a href=""><button class="download-btn">View Code</button></a>
                     <a href="https://drive.google.com/drive/folders/12gYtjBAZYrJHDFGAyEdxKezNFIAHEHhz?usp=sharing" target="_blank"><button class="download-btn">View Design Docs</button></a>
                     <a href="https://rishikesh-1.itch.io/chaos-reborn" target="_blank"><button class="download-btn">Play Demo</button></a>
-                    <a href="https://example.com" target="_blank"><button class="download-btn">New Button</button></a> <!-- New Button --> class="download-btn">View Design Docs</button></a>
+                    <a href="https://example.com" target="_blank"><button class="download-btn">New Button</button></a> <!-- New Button -->
                 </div>
-                <div class="project-card"> href="https://example.com" target="_blank"><button class="download-btn">New Button</button></a> <!-- New Button -->
+                <div class="project-card">
                     <div class="game-preview">
                         <video src="EagleSight.mp4" loop autoplay muted></video>
                     </div>
-                    <h3>Eagle Sight</h3>ideo src="EagleSight.mp4" loop autoplay muted></video>
+                    <h3>Eagle Sight</h3>
                     <p>A Sniper game with procedural generated world</p>
                     <button class="download-btn">View Code</button>
-                </div>d</p>
-                <div class="project-card">utton class="download-btn">View Code</button>
+                </div>
+                <div class="project-card">
                     <div class="game-preview">
                         <video src="3DPlatformer.mp4" loop autoplay muted></video>
                     </div>
-                    <h3>3D Platformer</h3>ideo src="3DPlatformer.mp4" loop autoplay muted></video>
+                    <h3>3D Platformer</h3>
                     <p>A First person 3D Platformer Game</p>
                     <a href="https://github.com/RishiKesh9849/3D-Platformer" target="_blank"><button class="download-btn">View Code</button></a>
                 </div>
-                <div class="project-card"> href="https://github.com/RishiKesh9849/3D-Platformer" target="_blank"><button class="download-btn">View Code</button></a>
+                <div class="project-card">
                     <div class="game-preview">
                         <video src="FlappyBirds.mp4" loop autoplay muted></video>
                     </div>
-                    <h3>Flappy Bird</h3>ideo src="FlappyBirds.mp4" loop autoplay muted></video>
+                    <h3>Flappy Bird</h3>
                     <p>An endless side scroller</p>
                     <a href="https://drive.google.com/file/d/1OXcnsfVLrobmHu-5Hcx4N9rLjcSiVtw9/view?usp=drive_link" target="_blank"><button class="download-btn">Play Demo</button></a>
                 </div>
-                <div class="project-card"> href="https://drive.google.com/file/d/1OXcnsfVLrobmHu-5Hcx4N9rLjcSiVtw9/view?usp=drive_link" target="_blank"><button class="download-btn">Play Demo</button></a>
+                <div class="project-card">
                     <div class="game-preview">
                         <video src="Companion.mp4" loop autoplay muted></video>
                     </div>
-                    <h3>Companion AI</h3>ideo src="Companion.mp4" loop autoplay muted></video>
+                    <h3>Companion AI</h3>
                     <p>A Palworld inspired companion AI</p>
                     <a href="https://github.com/RishiKesh9849/Thesis-Companion-Behaviour" target="_blank"><button class="download-btn">View Code</button></a>
                 </div>
-                <div class="project-card"> href="https://github.com/RishiKesh9849/Thesis-Companion-Behaviour" target="_blank"><button class="download-btn">View Code</button></a>
+                <div class="project-card">
                     <div class="game-preview">
                         <video src="AngryBirds.mp4" loop autoplay muted></video>
                     </div>
-                    <h3>Angry Birds</h3>ideo src="AngryBirds.mp4" loop autoplay muted></video>
+                    <h3>Angry Birds</h3>
                     <p>A single-level physics-based puzzle game</p>
                     <a href="https://github.com/RishiKesh9849/Angry-Birds" target="_blank"><button class="download-btn">View Code</button></a>
                 </div>
-                <div class="project-card"> href="https://github.com/RishiKesh9849/Angry-Birds" target="_blank"><button class="download-btn">View Code</button></a>
+                <div class="project-card">
                     <div class="game-preview">
                         <video src="CarMovement.mp4" loop autoplay muted></video>
                     </div>
-                    <h3>Car mechanics</h3>ideo src="CarMovement.mp4" loop autoplay muted></video>
+                    <h3>Car mechanics</h3>
                     <p>Simple car movement</p>
                     <a href="https://github.com/RishiKesh9849/Car-Movement" target="_blank"><button class="download-btn">View Code</button></a>
                 </div>
-            </div> href="https://github.com/RishiKesh9849/Car-Movement" target="_blank"><button class="download-btn">View Code</button></a>
-        </section>div>
+            </div>
+        </section>
 
-        <!-- Resume Section -->        </section>
+        <!-- Resume Section -->
         <section class="download-section" id="resume">
             <h2>Open Resume</h2>
-            <a href="https://drive.google.com/file/d/173I5qIM0gRIeHgCd97TI4xcMjKap-S_S/view?usp=sharing" target="_blank">-section" id="resume">
+            <a href="https://drive.google.com/file/d/173I5qIM0gRIeHgCd97TI4xcMjKap-S_S/view?usp=sharing" target="_blank">
                 <button class="download-btn">Open Resume</button>
-            </a>eHgCd97TI4xcMjKap-S_S/view?usp=sharing" target="_blank">
-        </section><button class="download-btn">Open Resume</button>
+            </a>
+        </section>
 
-        <!-- Contact Section -->        </section>
+        <!-- Contact Section -->
         <section class="contact-section" id="contact">
             <h2>Contact</h2>
-            <div class="social-links">act-section" id="contact">
+            <div class="social-links">
                 <a href="https://github.com/RishiKesh9849" target="_blank">GitHub</a>
                 <a href="https://www.linkedin.com/in/pathem-rishikesh-36547931a/" target="_blank">LinkedIn</a>
                 <a href="https://rishikesh-1.itch.io/" target="_blank">Itch.io</a>
-                <a href="https://mail.google.com/mail/u/3/#inbox?compose=DmwnWtDmBMpgkPkmxfktTZGqDjchKblgXdBQJCdJlpljCbwPrRLjtlVhkXGXNrtWlmSJhfXJsNSb" target="_blank">Email</a>target="_blank">LinkedIn</a>
+                <a href="https://mail.google.com/mail/u/3/#inbox?compose=DmwnWtDmBMpgkPkmxfktTZGqDjchKblgXdBQJCdJlpljCbwPrRLjtlVhkXGXNrtWlmSJhfXJsNSb" target="_blank">Email</a>
             </div>
-        </section> href="https://mail.google.com/mail/u/3/#inbox?compose=DmwnWtDmBMpgkPkmxfktTZGqDjchKblgXdBQJCdJlpljCbwPrRLjtlVhkXGXNrtWlmSJhfXJsNSb" target="_blank">Email</a>
+        </section>
     </main>
-ection>
-    <!-- JavaScript for Background Effects -->    </main>
+
+    <!-- JavaScript for Background Effects -->
     <script>
-        // Create Pulsing StarsaScript for Background Effects -->
+        // Create Pulsing Stars
         function createPulsingStars() {
             const starsContainer = document.querySelector('.pulsing-stars');
             for (let i = 0; i < 50; i++) {
-                const star = document.createElement('div');t.querySelector('.pulsing-stars');
+                const star = document.createElement('div');
                 star.className = 'pulsing-star';
-                star.style.width = `${Math.random() * 3 + 1}px`;ent('div');
+                star.style.width = `${Math.random() * 3 + 1}px`;
                 star.style.height = star.style.width;
-                star.style.left = `${Math.random() * 100}%`; 3 + 1}px`;
+                star.style.left = `${Math.random() * 100}%`;
                 star.style.top = `${Math.random() * 100}%`;
-                star.style.animationDuration = `${2 + Math.random() * 3}s`;;
+                star.style.animationDuration = `${2 + Math.random() * 3}s`;
                 starsContainer.appendChild(star);
-            }{2 + Math.random() * 3}s`;
-        }   starsContainer.appendChild(star);
-        createPulsingStars();   }
+            }
+        }
+        createPulsingStars();
 
-        // Interactive Cursor Effect        createPulsingStars();
+        // Interactive Cursor Effect
         document.addEventListener('mousemove', (e) => {
             const cursorEffect = document.querySelector('.cursor-effect');
             const trail = document.createElement('div');
-            trail.className = 'cursor-trail';'.cursor-effect');
-            trail.style.left = `${e.clientX}px`;ent('div');
+            trail.className = 'cursor-trail';
+            trail.style.left = `${e.clientX}px`;
             trail.style.top = `${e.clientY}px`;
-            cursorEffect.appendChild(trail);;
-x`;
-            setTimeout(() => {            cursorEffect.appendChild(trail);
+            cursorEffect.appendChild(trail);
+
+            setTimeout(() => {
                 trail.remove();
             }, 500);
-        });l.remove();
- }, 500);
-        // Create Particles        });
+        });
+
+        // Create Particles
         function createParticles() {
             const particlesContainer = document.querySelector('.particles');
             for (let i = 0; i < 100; i++) {
-                const particle = document.createElement('div');ment.querySelector('.particles');
+                const particle = document.createElement('div');
                 particle.className = 'particle';
-                particle.style.width = `${Math.random() * 3 + 1}px`;Element('div');
+                particle.style.width = `${Math.random() * 3 + 1}px`;
                 particle.style.height = particle.style.width;
-                particle.style.left = `${Math.random() * 100}%`; 1}px`;
+                particle.style.left = `${Math.random() * 100}%`;
                 particle.style.top = `${Math.random() * 100}%`;
-                particle.style.animationDuration = `${5 + Math.random() * 10}s`;;
+                particle.style.animationDuration = `${5 + Math.random() * 10}s`;
                 particlesContainer.appendChild(particle);
-            } Math.random() * 10}s`;
-        }   particlesContainer.appendChild(particle);
-        createParticles();   }
+            }
+        }
+        createParticles();
 
-        // Create Moving Stars        createParticles();
+        // Create Moving Stars
         function createStars() {
             const starfield = document.getElementById('starfield');
             const starCount = 100; // Number of drifting stars
-            const shootingStarCount = 5; // Number of shooting starsld');
+            const shootingStarCount = 5; // Number of shooting stars
 
-            // Create drifting stars            const shootingStarCount = 5; // Number of shooting stars
+            // Create drifting stars
             for (let i = 0; i < starCount; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
-eateElement('div');
-                // Randomize star size and position                star.className = 'star';
+
+                // Randomize star size and position
                 const size = Math.random() * 3 + 1; // Size between 1px and 4px
                 const x = Math.random() * 100; // Random horizontal position
-                const y = Math.random() * 100; // Random vertical position4px
-                const duration = Math.random() * 10 + 5; // Animation duration between 5s and 15son
+                const y = Math.random() * 100; // Random vertical position
+                const duration = Math.random() * 10 + 5; // Animation duration between 5s and 15s
 
-                star.style.width = `${size}px`;                const duration = Math.random() * 10 + 5; // Animation duration between 5s and 15s
+                star.style.width = `${size}px`;
                 star.style.height = `${size}px`;
                 star.style.left = `${x}%`;
-                star.style.top = `${y}%`;e}px`;
-                star.style.animationDuration = `${duration}s`;;
+                star.style.top = `${y}%`;
+                star.style.animationDuration = `${duration}s`;
 
-                starfield.appendChild(star);                star.style.animationDuration = `${duration}s`;
+                starfield.appendChild(star);
             }
-   starfield.appendChild(star);
-            // Create shooting stars            }
+
+            // Create shooting stars
             for (let i = 0; i < shootingStarCount; i++) {
                 const shootingStar = document.createElement('div');
                 shootingStar.className = 'shooting-star';
-nt('div');
-                // Randomize shooting star direction                shootingStar.className = 'shooting-star';
+
+                // Randomize shooting star direction
                 const directions = [
-                    'shooting-star-top-left',g star direction
+                    'shooting-star-top-left',
                     'shooting-star-top-right',
                     'shooting-star-bottom-left',
                     'shooting-star-bottom-right'
                 ];
-                const direction = directions[Math.floor(Math.random() * directions.length)];  'shooting-star-bottom-right'
+                const direction = directions[Math.floor(Math.random() * directions.length)];
 
-                // Randomize shooting star delay and duration                const direction = directions[Math.floor(Math.random() * directions.length)];
+                // Randomize shooting star delay and duration
                 const delay = Math.random() * 10; // Random delay between 0s and 10s
                 const duration = Math.random() * 5 + 3; // Animation duration between 3s and 8s
 
-                shootingStar.style.animationName = direction;                const duration = Math.random() * 5 + 3; // Animation duration between 3s and 8s
+                shootingStar.style.animationName = direction;
                 shootingStar.style.animationDelay = `${delay}s`;
                 shootingStar.style.animationDuration = `${duration}s`;
 
-                starfield.appendChild(shootingStar);                shootingStar.style.animationDuration = `${duration}s`;
+                starfield.appendChild(shootingStar);
             }
-        }   starfield.appendChild(shootingStar);
-   }
-        createStars();        }
+        }
+        createStars();
 
-        document.addEventListener('DOMContentLoaded', function() {        createStars();
+        document.addEventListener('DOMContentLoaded', function() {
             const videos = document.querySelectorAll('.game-preview video');
 
-            videos.forEach(video => {            const videos = document.querySelectorAll('.game-preview video');
+            videos.forEach(video => {
                 video.addEventListener('mouseenter', () => {
                     video.src = video.getAttribute('data-src');
                     video.play();
-                });ideo.getAttribute('data-src');
- video.play();
-                video.addEventListener('mouseleave', () => {                });
-                    video.pause();
-                    video.removeAttribute('src'); // Stop loading the videoener('mouseleave', () => {
                 });
-            }); video.removeAttribute('src'); // Stop loading the video
-        }); });
-    </script> });
+
+                video.addEventListener('mouseleave', () => {
+                    video.pause();
+                    video.removeAttribute('src'); // Stop loading the video
+                });
+            });
+        });
+    </script>
 </body>
-</html></html>
+</html>
